@@ -4,13 +4,14 @@ import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useEffect } from 'react';
+import { Notificaiton } from '../shared/Notification/Notification';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
 	const [loaded, error] = useFonts({
-		FiraSans: require('../assets/fonts/FiraSans-Regular.ttf'),
-		FiraSansSemiBold: require('../assets/fonts/FiraSans-SemiBold.ttf'),
+		'FiraSans-Regular': require('../assets/fonts/FiraSans-Regular.ttf'),
+		'FiraSans-SemiBold': require('../assets/fonts/FiraSans-SemiBold.ttf'),
 	});
 
 	useEffect(() => {
@@ -31,12 +32,11 @@ export default function RootLayout() {
 
 	return (
 		<SafeAreaProvider>
-			<StatusBar style="dark" />
+			<Notificaiton />
+			<StatusBar style="light" />
 			<Stack
 				screenOptions={{
-					headerStyle: {
-						backgroundColor: Colors.black,
-					},
+					// statusBarColor: Colors.black,
 					contentStyle: {
 						backgroundColor: Colors.black,
 					},

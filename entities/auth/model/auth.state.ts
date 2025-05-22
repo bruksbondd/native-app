@@ -1,4 +1,3 @@
-
 import { createJSONStorage, atomWithStorage } from 'jotai/utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { atom } from 'jotai';
@@ -33,9 +32,10 @@ export const loginAtom = atom(
 				email,
 				password,
 			});
+			
 			set(authAtom, {
 				isLoading: false,
-				access_token: data.access_token,
+				access_token: data.accessToken,
 				error: null,
 			});
 		} catch (error) {

@@ -1,4 +1,3 @@
-
 import { View, Text } from 'react-native';
 import { Colors } from '../../../shared/tokens';
 import { useLocalSearchParams } from 'expo-router';
