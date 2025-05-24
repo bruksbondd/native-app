@@ -36,10 +36,10 @@ export default function Login() {
 			setLocalError(error);
 		}
 	}, [error]);
-console.log("access_token1", access_token)
+
 	useEffect(() => {
 		if (access_token) {
-			console.log('access_token', access_token);
+			
 			setLocalError(undefined);
 			router.replace('/(app)');
 		}

@@ -52,7 +52,7 @@ export default function MyCourses() {
 			const token = await Notificaitons.getExpoPushTokenAsync({
 				projectId: Constants.expoConfig?.extra?.eas.projectId,
 			});
-			console.log(token);
+			
 		}
 	};
 
